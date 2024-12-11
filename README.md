@@ -39,12 +39,15 @@ To set the OpenAI API key as an environment variable in Streamlit apps, do the f
 ```sh
 OPENAI_API_KEY='xxxxxxxxxx'
 ```
-
 ## Run it locally
 
+Um die Anwendung lokal auszuführen, benötigen Sie Docker und Docker-Compose. Führen Sie die folgenden Schritte aus:
+
+1. Stellen Sie sicher, dass Docker und Docker-Compose auf Ihrem System installiert sind.
+2. Erstellen Sie die Docker-Images und starten Sie die Container mit:
+
 ```sh
-virtualenv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
-streamlit run Chatbot.py
+docker-compose up --build
 ```
+
+3. Die Anwendung sollte nun unter `http://localhost:8501` verfügbar sein.
