@@ -1,0 +1,19 @@
+services:
+
+  streamlit-aut-app:
+    build:
+      context: ./app
+      dockerfile: Dockerfile
+    container_name: llm-examples
+    hostname: llm-examples
+    restart: unless-stopped
+
+    ports:
+      - "8501:8501"
+
+    networks:
+      - my_network
+
+networks:
+  my_network:
+    driver: bridge
